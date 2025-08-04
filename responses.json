@@ -1,0 +1,14 @@
+{
+  "default": "I don’t know that—try another Pi question!",
+  "responses": {
+    "mining": "Mining earns Pi coins daily. Join a Security Circle to boost your rate!",
+    "security circle": "Add 3-5 trusted Pioneers in the Pi App for a Security Circle.",
+    "kyc": "KYC verifies your identity for Mainnet—start it in the Pi App.",
+    "kyb": "KYB is for business accounts on Pi—check Pi App for updates.",
+    "pi chats": "Find Pi Chats in the Pi App’s community section.",
+    "wallet": "Use the Pi Wallet app to manage your coins—keep your keys safe!",
+    "banxa": "Banxa in the Pi Wallet lets you trade Pi for fiat.",
+    "startup pi": "Startup Pi is the early mining phase—keep mining to grow your balance!",
+    "pi utilities": "Pi Utilities in the Pi App includes tools like Sandbox authorization."
+  }
+}
