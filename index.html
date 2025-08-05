@@ -6,28 +6,26 @@
   <title>GuidebotPI v1.0.0.1</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="assets/logo.png">
+  <script src="https://sdk.minepi.com/pi-sdk.js"></script>
+  <script>Pi.init({ version: "2.0", sandbox: true });</script>
 </head>
 <body>
   <header>
     <img src="assets/logo.png" alt="GuidebotPI Logo" class="logo">
     <h1>GuidebotPI</h1>
-    <p>Your Pi Network Companion</p>
+    <p>Your Pi Network Guide!</p>
   </header>
   <nav>
     <div class="menu-icon">☰</div>
     <ul class="menu">
-      <li><a href="#chatbot" class="active">ChatbotPI</a></li>
+      <li><a href="#guide">ChatbotPI</a></li>
       <li><a href="#security">Find Security Circle</a></li>
       <li><a href="#profile">Share Profile</a></li>
       <li><a href="#donate">Donate</a></li>
-      <li><a href="#official-channels">Official Channels</a></li>
-      <li><a href="#founders">Founders</a></li>
-      <li><a href="#verified-businesses">Verified Businesses</a></li>
-      <li><a href="#blockchain-explorer">Blockchain Explorer</a></li>
     </ul>
   </nav>
   <main>
-    <section id="chatbot">
+    <section id="guide">
       <h2>ChatbotPI</h2>
       <p>Ask about Pi Network!</p>
       <form id="chatForm">
@@ -38,74 +36,25 @@
     </section>
     <section id="security" class="hidden">
       <h2>Find Security Circle</h2>
-      <p>Connect with 3-5 trusted Pioneers to boost your mining rate.</p>
-      <p>Join the community on <a href="https://x.com/PiCoreTeam" target="_blank">X</a> or <a href="https://facebook.com/PiCoreTeam" target="_blank">Facebook</a> to find circle members.</p>
+      <p>Connect with Pioneers to boost mining.</p>
+      <p>Join via <a href="https://x.com/PiCoreTeam" target="_blank">X</a> or <a href="https://facebook.com/PiCoreTeam" target="_blank">Facebook</a>.</p>
     </section>
     <section id="profile" class="hidden">
       <h2>Share Profile</h2>
-      <p>Share your Pi username to grow your network.</p>
       <input type="text" id="username" placeholder="Enter your Pi username">
       <button id="shareBtn">Share</button>
       <div id="shareResult"></div>
     </section>
     <section id="donate" class="hidden">
       <h2>Donate</h2>
-      <p>Support GuidebotPI’s development with a donation.</p>
+      <p>Support GuidebotPI development!</p>
       <a href="https://minepi.com/donate" target="_blank">Donate Pi</a>
-    </section>
-    <section id="official-channels" class="hidden">
-      <h2>Official Communications Channels</h2>
-      <ul>
-        <li>Website: <a href="https://minepi.com" target="_blank">minepi.com</a></li>
-        <li>Support Portal: <a href="https://minepi.com/support" target="_blank">minepi.com/support</a></li>
-        <li>Community Wiki: <a href="https://minepi.com/wiki" target="_blank">minepi.com/wiki</a></li>
-        <li>Twitter: <a href="https://x.com/PiCoreTeam" target="_blank">@PiCoreTeam</a></li>
-        <li>Telegram: <a href="https://t.me/PiAnnouncements" target="_blank">PiAnnouncements</a></li>
-        <li>Facebook: <a href="https://facebook.com/PiCoreTeam" target="_blank">@PiCoreTeam</a></li>
-        <li>Instagram: <a href="https://instagram.com/pi_network" target="_blank">@pi_network</a></li>
-        <li>YouTube: <a href="https://youtube.com/c/PiCoreTeam" target="_blank">PiCoreTeam</a></li>
-        <li>Medium: <a href="https://pinetwork-official.medium.com" target="_blank">pinetwork-official</a></li>
-        <li>Email domains: @pi.email, @picoreteam.org, @minepi.com</li>
-      </ul>
-    </section>
-    <section id="founders" class="hidden">
-      <h2>The Founders</h2>
-      <h3>Nicolas Kokkalis</h3>
-      <p>Head of Technology</p>
-      <p>Dr. Nicolas Kokkalis is a Stanford PhD and instructor of Stanford’s first decentralized applications class, CS359B, in 2018. His work focuses on combining distributed systems and human-computer interaction to bring cryptocurrency to everyday people.</p>
-      <p>Social Media: <a href="https://x.com/nkokkalis" target="_blank">@nkokkalis</a>, <a href="https://instagram.com/nicolas.kokkalis" target="_blank">@nicolas.kokkalis</a></p>
-      <h3>Chengdiao Fan</h3>
-      <p>Head of Product</p>
-      <p>Dr. Chengdiao Fan is a Stanford PhD in Anthropological Sciences, harnessing social computing to unlock human potential on a global scale.</p>
-      <p>Social Media: <a href="https://x.com/chengdiao" target="_blank">@chengdiao</a></p>
-    </section>
-    <section id="verified-businesses" class="hidden">
-      <h2>Verified Businesses</h2>
-      <p>Businesses verified through KYB and integrated with Pi:</p>
-      <ul>
-        <li>OKX</li>
-        <li>Bitget</li>
-        <li>Gate.io</li>
-        <li>Pionex</li>
-        <li>Onramp.money</li>
-        <li>Onramper</li>
-        <li>Zypto</li>
-        <li>MEXC</li>
-        <li>Banxa</li>
-      </ul>
-      <p>Check the latest list at <a href="https://minepi.com/kyb-list/#VerifiedBusinesses" target="_blank">minepi.com/kyb-list</a>.</p>
-    </section>
-    <section id="blockchain-explorer" class="hidden">
-      <h2>Blockchain Explorer</h2>
-      <p>View Pi Network blockchain activity.</p>
-      <a href="https://minepi.com/blockexplorer" target="_blank">Visit Pi Blockexplorer</a>
     </section>
   </main>
   <footer>
     <p>Join Pi: <a href="https://minepi.com/Bradkay">minepi.com/Bradkay</a></p>
     <p><a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a></p>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/@pi/core-team@2.0/dist/pi-sdk.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
