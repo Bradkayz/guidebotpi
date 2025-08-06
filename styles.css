@@ -1,68 +1,111 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
   margin: 0;
   padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 header {
   background-color: #6A1B9A;
   color: #FFD700;
   text-align: center;
-  padding: 1rem;
+  padding: 20px;
 }
 .logo {
-  width: 60px;
+  max-width: 100px;
   height: auto;
 }
-nav {
+h1 {
+  margin: 0;
+  font-size: 2em;
+}
+p {
+  margin: 5px 0;
+}
+#languageSelect {
+  padding: 5px;
+  margin: 10px;
   background-color: #FFD700;
-  padding: 0.5rem;
+  color: #6A1B9A;
+  border: none;
+  border-radius: 5px;
+}
+.auth-btn {
+  background-color: #FFD700;
+  color: #6A1B9A;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.auth-btn:hover {
+  background-color: #e0c500;
+}
+#userStatus {
+  margin-left: 10px;
+  color: #FFD700;
+}
+nav {
+  background-color: #333;
+  padding: 10px;
 }
 .menu-icon {
-  font-size: 28px;
-  cursor: pointer;
   display: none;
-  padding: 0.5rem;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #FFD700;
+  padding: 10px;
 }
 .menu {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
 }
-.menu li a {
+.menu li {
+  margin: 0 15px;
+}
+.menu a {
+  color: #FFD700;
   text-decoration: none;
-  color: #6A1B9A;
-  padding: 0.5rem 1rem;
+  padding: 10px;
   font-weight: bold;
 }
-.menu li a:hover, .menu li a.active {
-  background-color: #6A1B9A;
-  color: #FFD700;
+.menu a.active {
+  background-color: #FFD700;
+  color: #6A1B9A;
+  border-radius: 5px;
 }
 main {
-  padding: 1rem;
+  padding: 20px;
   margin-bottom: 60px;
 }
 section {
-  background-color: #fff;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-.hidden {
+section.hidden {
   display: none;
+}
+section h2 {
+  color: #6A1B9A;
+  margin-top: 0;
 }
 #chatForm {
   display: flex;
-  gap: 0.5rem;
+  gap: 10px;
 }
 input, button {
-  padding: 0.5rem;
+  padding: 10px;
   font-size: 1rem;
+  border-radius: 5px;
+}
+input {
+  flex: 1;
+  border: 1px solid #6A1B9A;
 }
 button {
   background-color: #6A1B9A;
@@ -73,17 +116,31 @@ button {
 button:hover {
   background-color: #4A1370;
 }
-#response, #shareResult {
-  margin-top: 0.5rem;
-  padding: 0.5rem;
+#response, #shareResult, #circleResult, #donateStatus, #faqResponse {
+  margin-top: 10px;
+  padding: 10px;
   background-color: #f0f0f0;
-  border-radius: 4px;
+  border-radius: 5px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  margin: 10px 0;
+}
+ul li a {
+  color: #6A1B9A;
+  text-decoration: none;
+}
+ul li a:hover {
+  text-decoration: underline;
 }
 footer {
   background-color: #6A1B9A;
   color: #FFD700;
   text-align: center;
-  padding: 1rem;
+  padding: 10px;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -106,9 +163,13 @@ footer a:hover {
     top: 70px;
     left: 0;
     width: 100%;
-    background-color: #FFD700;
+    background-color: #333;
   }
-  .menu.active {
+  .menu.show {
     display: flex;
+  }
+  .menu li {
+    margin: 10px 0;
+    text-align: center;
   }
 }

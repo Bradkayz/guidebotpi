@@ -3,58 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GuidebotPI v1.0.0.1 - Your advanced Pi Network companion with chatbot, community tools, and ecosystem resources.">
   <title>GuidebotPI v1.0.0.1</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="assets/logo.png">
-  <script src="https://sdk.minepi.com/pi-sdk.js"></script>
-  <script>Pi.init({ version: "2.0", sandbox: true });</script>
+  <script src="[invalid url, do not cite]
 </head>
 <body>
   <header>
     <img src="assets/logo.png" alt="GuidebotPI Logo" class="logo">
     <h1>GuidebotPI</h1>
-    <p>Your Pi Network Guide!</p>
+    <p>Your Advanced Pi Network Companion</p>
+    <select id="languageSelect">
+      <option value="en">English</option>
+      <option value="sw">Swahili</option>
+      <option value="af">Afrikaans</option>
+    </select>
+    <button id="loginBtn" class="auth-btn">Login with Pi</button>
+    <span id="userStatus"></span>
   </header>
   <nav>
     <div class="menu-icon">☰</div>
     <ul class="menu">
-      <li><a href="#guide">ChatbotPI</a></li>
-      <li><a href="#security">Find Security Circle</a></li>
-      <li><a href="#profile">Share Profile</a></li>
-      <li><a href="#donate">Donate</a></li>
+      <li><a href="#guide" class="active" data-tab="guide">ChatbotPI</a></li>
+      <li><a href="#security" data-tab="security">Find Security Circle</a></li>
+      <li><a href="#profile" data-tab="profile">Share Profile</a></li>
+      <li><a href="#donate" data-tab="donate">Donate</a></li>
+      <li><a href="#official" data-tab="official">Official Channels</a></li>
+      <li><a href="#founders" data-tab="founders">Founders</a></li>
+      <li><a href="#business" data-tab="business">Verified Businesses</a></li>
+      <li><a href="#faq" data-tab="faq">Pi FAQs</a></li>
+      <li><a href="#blockchain" data-tab="blockchain">Blockchain Explorer</a></li>
     </ul>
   </nav>
   <main>
     <section id="guide">
       <h2>ChatbotPI</h2>
-      <p>Ask about Pi Network!</p>
+      <p data-i18n="chatbot_desc">Ask about Pi Network, from mining to wallets!</p>
       <form id="chatForm">
-        <input type="text" id="userQuestion" placeholder="Ask about Pi...">
-        <button type="submit">Ask</button>
+        <input type="text" id="userQuestion" placeholder="Ask about Pi..." data-i18n-placeholder="ask_placeholder">
+        <button type="submit" data-i18n="ask_button">Ask</button>
       </form>
       <div id="response"></div>
     </section>
     <section id="security" class="hidden">
-      <h2>Find Security Circle</h2>
-      <p>Connect with Pioneers to boost mining.</p>
-      <p>Join via <a href="https://x.com/PiCoreTeam" target="_blank">X</a> or <a href="https://facebook.com/PiCoreTeam" target="_blank">Facebook</a>.</p>
+      <h2 data-i18n="security_title">Find Security Circle</h2>
+      <p data-i18n="security_desc">Connect with trusted Pioneers to boost your mining rate.</p>
+      <button id="findCircle" data-i18n="find_button">Find Pioneers</button>
+      <div id="circleResult"></div>
     </section>
     <section id="profile" class="hidden">
-      <h2>Share Profile</h2>
-      <input type="text" id="username" placeholder="Enter your Pi username">
-      <button id="shareBtn">Share</button>
+      <h2 data-i18n="profile_title">Share Profile</h2>
+      <p data-i18n="profile_desc">Share your Pi username to grow your network.</p>
+      <input type="text" id="username" placeholder="Enter your Pi username" data-i18n-placeholder="username_placeholder">
+      <button id="shareBtn" data-i18n="share_button">Share</button>
       <div id="shareResult"></div>
     </section>
     <section id="donate" class="hidden">
-      <h2>Donate</h2>
-      <p>Support GuidebotPI development!</p>
-      <a href="https://minepi.com/donate" target="_blank">Donate Pi</a>
+      <h2 data-i18n="donate_title">Donate</h2>
+      <p data-i18n="donate_desc">Support GuidebotPI with Pi donations!</p>
+      <button id="donateBtn" data-i18n="donate_button">Donate Now</button>
+      <div id="donateStatus"></div>
+    </section>
+    <section id="official" class="hidden">
+      <h2 data-i18n="official_title">Official Channels</h2>
+      <ul>
+        <li><a href="[invalid url, do not cite] target="_blank" data-i18n="x_link">X</a></li>
+        <li><a href="[invalid url, do not cite] target="_blank" data-i18n="facebook_link">Facebook</a></li>
+        <li><a href="[invalid url, do not cite] target="_blank" data-i18n="telegram_link">Telegram</a></li>
+        <li><a href="[invalid url, do not cite] target="_blank" data-i18n="youtube_link">YouTube</a></li>
+      </ul>
+    </section>
+    <section id="founders" class="hidden">
+      <h2 data-i18n="founders_title">Founders</h2>
+      <p><strong>Nicolas Kokkalis</strong> - <span data-i18n="nicolas_desc">Stanford PhD, Head of Technology, leading decentralized app innovation.</span></p>
+      <p><strong>Chengdiao Fan</strong> - <span data-i18n="chengdiao_desc">Stanford PhD, Head of Product, building inclusive ecosystems.</span></p>
+    </section>
+    <section id="business" class="hidden">
+      <h2 data-i18n="business_title">Verified Businesses</h2>
+      <p data-i18n="business_desc">Explore KYB-verified partners integrated with Pi.</p>
+      <ul>
+        <li><a href="[invalid url, do not cite] target="_blank">OKX</a></li>
+        <li><a href="[invalid url, do not cite] target="_blank">Banxa</a></li>
+        <li><a href="[invalid url, do not cite] target="_blank">Bitget</a></li>
+      </ul>
+    </section>
+    <section id="faq" class="hidden">
+      <h2 data-i18n="faq_title">Pi FAQs</h2>
+      <p data-i18n="faq_desc">Get answers from the official Pi FAQ.</p>
+      <a href="[invalid url, do not cite] target="_blank" data-i18n="faq_link">Visit Pi FAQ</a>
+      <div id="faqResponse"></div>
+    </section>
+    <section id="blockchain" class="hidden">
+      <h2 data-i18n="blockchain_title">Blockchain Explorer</h2>
+      <p data-i18n="blockchain_desc">Explore Pi Network’s blockchain transactions.</p>
+      <a href="[invalid url, do not cite] target="_blank" data-i18n="blockexplorer_link">Visit Blockexplorer</a>
     </section>
   </main>
   <footer>
-    <p>Join Pi: <a href="https://minepi.com/Bradkay">minepi.com/Bradkay</a></p>
-    <p><a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a></p>
+    <p data-i18n="join_pi">Join Pi: <a href="[invalid url, do not cite]
+    <p><a href="privacy.html" data-i18n="privacy_link">Privacy</a> | <a href="terms.html" data-i18n="terms_link">Terms</a></p>
   </footer>
+  <script src="https://unpkg.com/i18next@23.11.5/dist/umd/i18next.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
